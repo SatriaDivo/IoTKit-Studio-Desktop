@@ -1,8 +1,13 @@
-# IoTKit-Studio Desktop — Dokumen Produk
+# IoTKit-Studio Desktop
 
-Draft pengembangan IoTKit-Studio menjadi workspace desktop dengan backend lokal.
+IoTKit-Studio Desktop mengembangkan workspace desktop IoT dengan backend lokal Rust. Repo ini saat ini memiliki dokumentasi produk dan bootstrap awal Tauri + React/Vite + Axum.
 
-## Isi
+## Mulai
+
+Lihat [Quick Start](docs/QUICKSTART.md) untuk menjalankan shell desktop di Windows.
+
+## Dokumentasi
+
 - [PRD](docs/PRD.md) — tujuan, pengguna, ruang lingkup MVP, dan kriteria penerimaan.
 - [Arsitektur](docs/ARCHITECTURE.md) — komponen aplikasi dan alur komunikasi.
 - [Audit integrasi](docs/INTEGRATION_AUDIT.md) — batas reuse dan integrasi dengan produk web.
@@ -10,12 +15,10 @@ Draft pengembangan IoTKit-Studio menjadi workspace desktop dengan backend lokal.
 - [Fitur](docs/FEATURES.md) — daftar fitur berdasarkan prioritas.
 - [Roadmap dan task](docs/TASKS.md) — tahapan implementasi serta issue GitHub.
 
-## Keputusan saat ini
-- IoTKit-Studio web saat ini berfokus pada simulasi/pengujian IoT.
-- Arah baru: aplikasi desktop Tauri dengan backend Rust lokal (Axum/Tokio).
-- UI Tauri dan browser menggunakan satu API lokal; LAN mati secara default.
-- API key AI diatur dari aplikasi dan disimpan dalam credential store lokal.
-- Arah uji MVP: Windows + ESP32 + Arduino CLI, belum dianggap tervalidasi.
-- Integrasi perangkat dan layanan IoT ditambahkan bertahap.
+## Status implementasi
 
-Dokumen masih draft. Keputusan yang belum diuji diberi status provisional dalam roadmap.
+- Shell Tauri 2 + React/TypeScript/Vite dan local API Rust/Axum tersedia pada branch implementasi.
+- Windows CI berhasil membangun UI dan executable Rust/Tauri.
+- API saat ini hanya menyediakan endpoint health read-only di loopback.
+- Akses LAN, proyek, AI provider/key, Docker, MQTT, Node-RED, dan board integration belum tersedia.
+- Arah awal tetap Windows + ESP32 + Arduino CLI; board/toolchain belum diuji pada hardware.

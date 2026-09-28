@@ -1,20 +1,23 @@
 # Roadmap dan Task — IoTKit-Studio Desktop
 
-Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task besar menjadi issue yang dapat diselesaikan dan ditinjau dalam 1–3 hari kerja.
+Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task besar menjadi issue yang dapat diselesaikan dan ditinjau dalam 1–3 hari kerja. Status di bawah menunjukkan kondisi nyata; keputusan tertulis tidak dihitung sebagai implementasi atau pengujian.
 
 ## EPIC 0 — Audit dan keputusan MVP
 
-### T0.1 Audit repo dan batas integrasi
+### T0.1 Audit repo dan batas integrasi — Dokumentasi selesai
 - Petakan fitur web yang reuse/extend/new; baca BRD/SRS, frontend Next.js, backend Go/Node, schema, AI agent.
+- Hasil: [audit integrasi](INTEGRATION_AUDIT.md).
 - **Selesai jika:** matriks reuse/extend/new ditinjau dan fitur web lama tidak berubah tanpa scope issue.
 
-### T0.2 Spike Tauri + browser LAN
+### T0.2 Spike Tauri + browser LAN — Belum diuji
+- Keputusan awal: satu HTTP API Rust (Axum/Tokio) dipakai UI Tauri dan browser; loopback default, LAN opt-in.
 - Uji React UI lewat Tauri dan browser dengan backend Rust; uji localhost dan perangkat kedua.
-- **Selesai jika:** keputusan bind, session/pairing, firewall dan batas browser tercatat.
+- **Selesai jika:** spike dibangun dan diuji pada host/perangkat; keputusan bind, session/pairing, firewall dan batas browser tercatat.
+- Catatan: keputusan desain tercatat di [MVP decisions](MVP_DECISIONS.md), tetapi lingkungan audit belum memiliki Rust/Cargo sehingga build belum diklaim.
 
-### T0.3 Pilih OS, board dan toolchain awal
-- Bandingkan setup/build/flash/serial untuk board sasaran.
-- **Selesai jika:** satu jalur MVP ditetapkan dengan panduan setup yang diuji.
+### T0.3 Pilih OS, board dan toolchain awal — Keputusan provisional
+- Arah kerja: Windows 10/11 64-bit, ESP32, Arduino CLI.
+- **Selesai jika:** satu jalur MVP ditetapkan dengan panduan setup yang diuji pada mesin Windows dan board sasaran.
 
 ## EPIC 1 — Desktop shell dan local API
 
@@ -54,7 +57,7 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 - **Selesai jika:** provider/model tampil tanpa memaparkan key.
 
 ### T3.3 Secure key storage
-- OS credential store atau Stronghold; definisikan fallback platform.
+- OS credential store; definisikan fallback platform.
 - **Selesai jika:** key tidak masuk SQLite, repo, project, URL, log atau crash output.
 
 ### T3.4 AI plan, diff, apply dan snapshot

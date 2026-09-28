@@ -9,7 +9,7 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 - Hasil: [audit integrasi](INTEGRATION_AUDIT.md).
 - **Selesai jika:** matriks reuse/extend/new ditinjau dan fitur web lama tidak berubah tanpa scope issue.
 
-### T0.2 Spike Tauri + browser LAN — Belum diuji
+### T0.2 Spike Tauri + browser LAN — Parsial
 - Keputusan awal: satu HTTP API Rust (Axum/Tokio) dipakai UI Tauri dan browser; loopback default, LAN opt-in.
 - Uji React UI lewat Tauri dan browser dengan backend Rust; uji localhost dan perangkat kedua.
 - **Selesai jika:** spike dibangun dan diuji pada host/perangkat; keputusan bind, session/pairing, firewall dan batas browser tercatat.

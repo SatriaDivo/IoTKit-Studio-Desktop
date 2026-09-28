@@ -40,6 +40,8 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 
 ## EPIC 2 — Workspace proyek
 
+Backlog rinci WP-01 sampai WP-05 beserta acceptance criteria ada di [WORKSPACE_MVP.md](WORKSPACE_MVP.md). Implementasi menunggu autentikasi local API/Tauri boundary yang aman.
+
 ### T2.1 Project registry
 - Create/open/rename/recent projects dan migrasi SQLite metadata.
 - **Selesai jika:** proyek dibuka kembali setelah restart dan hanya metadata non-secret disimpan.

@@ -14,6 +14,7 @@ Lihat [Quick Start](docs/QUICKSTART.md) untuk menjalankan shell desktop di Windo
 - [Keputusan MVP](docs/MVP_DECISIONS.md) — keputusan kerja dan kriteria spike.
 - [Fitur](docs/FEATURES.md) — daftar fitur berdasarkan prioritas.
 - [Roadmap dan task](docs/TASKS.md) — tahapan implementasi serta issue GitHub.
+- [Workspace proyek](docs/WORKSPACE_MVP.md) — spesifikasi dan backlog P0/P1 untuk fitur proyek lokal.
 
 ## Status implementasi
 

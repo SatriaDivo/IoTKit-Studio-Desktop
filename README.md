@@ -3,10 +3,10 @@
 Draft pengembangan IoTKit-Studio menjadi workspace desktop dengan backend lokal.
 
 ## Isi
-- [PRD](PRD.md) — tujuan, pengguna, ruang lingkup MVP, dan kriteria penerimaan.
-- [Arsitektur](ARCHITECTURE.md) — komponen aplikasi dan alur komunikasi.
-- [Fitur](FEATURES.md) — daftar fitur berdasarkan prioritas.
-- [Roadmap dan task](TASKS.md) — tahapan implementasi serta issue GitHub.
+- [PRD](docs/PRD.md) — tujuan, pengguna, ruang lingkup MVP, dan kriteria penerimaan.
+- [Arsitektur](docs/ARCHITECTURE.md) — komponen aplikasi dan alur komunikasi.
+- [Fitur](docs/FEATURES.md) — daftar fitur berdasarkan prioritas.
+- [Roadmap dan task](docs/TASKS.md) — tahapan implementasi serta issue GitHub.
 
 ## Keputusan saat ini
 - IoTKit-Studio web saat ini berfokus pada simulasi/pengujian IoT.

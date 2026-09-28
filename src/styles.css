@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e5edf8;
+  background: #0b1220;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 360px; min-height: 100vh; }
+.shell {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 36px 0 28px;
+}
+.topbar { display: flex; align-items: center; gap: 14px; }
+.brand-mark {
+  display: grid; place-items: center; width: 46px; height: 46px;
+  border-radius: 14px; background: #153a53; color: #59d8cf;
+  font-size: 14px; font-weight: 800; letter-spacing: .04em;
+}
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 19px; letter-spacing: -.02em; }
+.eyebrow { color: #7f94ae; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.phase { margin-left: auto; padding: 7px 10px; border: 1px solid #27364a; border-radius: 999px; color: #a9bad0; font-size: 11px; }
+.welcome { margin: 74px 0 30px; max-width: 650px; }
+.welcome h2 { margin: 12px 0; font-size: clamp(28px, 5vw, 42px); letter-spacing: -.045em; }
+.intro { color: #9aabc0; font-size: 15px; line-height: 1.7; }
+.status-card, .next-card {
+  border: 1px solid #243247; border-radius: 16px; background: #111b2b;
+}
+.status-card { display: flex; align-items: center; gap: 13px; padding: 18px; }
+.status-dot { width: 10px; height: 10px; flex: 0 0 auto; border-radius: 50%; background: #e5a848; box-shadow: 0 0 14px #e5a84866; }
+.status-dot.online { background: #42d69b; box-shadow: 0 0 14px #42d69b66; }
+.status-copy { min-width: 0; }
+.status-copy h3, .next-card h3 { font-size: 14px; }
+.status-copy p { margin-top: 5px; color: #90a2b9; font-size: 12px; }
+.status-label { margin-left: auto; color: #e5a848; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.online-label { color: #42d69b; }
+.next-card { margin-top: 14px; padding: 20px; }
+.next-card ul { margin: 14px 0 0; padding-left: 19px; color: #9aabc0; font-size: 13px; line-height: 2; }
+footer { margin-top: 24px; color: #65778f; font-size: 11px; }
+@media (max-width: 560px) { .shell { width: calc(100% - 32px); padding-top: 22px; } .welcome { margin-top: 54px; } .status-label { display: none; } }

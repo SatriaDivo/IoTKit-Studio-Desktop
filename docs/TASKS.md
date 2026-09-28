@@ -9,11 +9,12 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 - Hasil: [audit integrasi](INTEGRATION_AUDIT.md).
 - **Selesai jika:** matriks reuse/extend/new ditinjau dan fitur web lama tidak berubah tanpa scope issue.
 
-### T0.2 Spike Tauri + browser LAN — Belum diuji
+### T0.2 Spike Tauri + browser LAN — Parsial
 - Keputusan awal: satu HTTP API Rust (Axum/Tokio) dipakai UI Tauri dan browser; loopback default, LAN opt-in.
-- Uji React UI lewat Tauri dan browser dengan backend Rust; uji localhost dan perangkat kedua.
-- **Selesai jika:** spike dibangun dan diuji pada host/perangkat; keputusan bind, session/pairing, firewall dan batas browser tercatat.
-- Catatan: keputusan desain tercatat di [MVP decisions](MVP_DECISIONS.md), tetapi lingkungan audit belum memiliki Rust/Cargo sehingga build belum diklaim.
+- Bootstrap UI Tauri dan Axum health API tersedia; npm build serta cargo build lulus di Windows CI.
+- **Masih perlu:** jalankan app secara manual, uji health endpoint dari browser pada host, lalu implementasi dan uji akses browser dari perangkat kedua.
+- LAN/pairing belum diimplementasikan; kriteria jaringan belum terpenuhi.
+- Keputusan desain tercatat di [MVP decisions](MVP_DECISIONS.md).
 
 ### T0.3 Pilih OS, board dan toolchain awal — Keputusan provisional
 - Arah kerja: Windows 10/11 64-bit, ESP32, Arduino CLI.
@@ -21,8 +22,9 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 
 ## EPIC 1 — Desktop shell dan local API
 
-### T1.1 Bootstrap Tauri 2 + React + TypeScript + Vite
-- **Selesai jika:** dev app dan production build dasar berjalan pada OS sasaran.
+### T1.1 Bootstrap Tauri 2 + React + TypeScript + Vite — Scaffold dan build CI selesai
+- Source shell tersedia; npm build dan cargo build lulus di Windows CI.
+- **Masih perlu:** buka jendela aplikasi secara manual dan validasi paket Windows.
 
 ### T1.2 Lifecycle backend Rust
 - Start/stop, health check, restart, error, penutupan bersih.
@@ -114,8 +116,9 @@ Gunakan tiap EPIC sebagai milestone/parent issue di GitHub Projects. Pecah task 
 - Review bind, auth/session, path, command allowlist, secret redaction.
 - **Selesai jika:** blocker ditutup atau rilis dihentikan sampai ditangani.
 
-### T6.3 Quick start dan troubleshooting
-- **Selesai jika:** pengguna baru dapat menjalankan demo dari panduan tanpa bantuan langsung.
+### T6.3 Quick start dan troubleshooting — Awal tersedia
+- [Quick Start](QUICKSTART.md) mendokumentasikan setup shell dasar.
+- **Selesai jika:** pengguna baru dapat menjalankan demo end-to-end dari panduan tanpa bantuan langsung.
 
 ## Board GitHub Projects
 
